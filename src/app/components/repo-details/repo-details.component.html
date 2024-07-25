@@ -1,0 +1,19 @@
+<div *ngIf="repository" class="repo-details-container">
+  <mat-card class="repo-card">
+    <mat-card-title class="repo-title">{{ repository.name }}</mat-card-title>
+    <mat-card-content class="repo-content">
+      <p class="repo-description">{{ repository.description }}</p>
+      <a class="repo-link" href="{{ repository.html_url }}" target="_blank">View on GitHub</a>
+      <div class="repo-stats">
+        <p><strong>Forks:</strong> {{ repository.forks_count }}</p>
+        <p><strong>Stars:</strong> {{ repository.stargazers_count }}</p>
+        <p><strong>Total Issues:</strong> {{ totalIssuesCount }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
+  <div class="charts-container">
+    <app-issues-list [owner]="repository.owner.login" [repo]="repository.name"></app-issues-list>
+    <app-issues-chart [owner]="repository.owner.login" [repo]="repository.name"></app-issues-chart>
+  </div>
+</div>

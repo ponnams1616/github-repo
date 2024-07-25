@@ -1,0 +1,13 @@
+.card-title{
+    margin-left: inherit;
+}
+.no-results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px; 
+    color: rgba(0, 0, 0, 0.6);
+  }

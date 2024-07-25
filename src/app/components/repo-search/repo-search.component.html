@@ -1,0 +1,31 @@
+<div class="search-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Search Repositories</mat-label>
+    <input matInput placeholder="Search for Repo" [(ngModel)]="searchTerm" (keyup.enter)="searchRepo()">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="searchRepo()">Search</button>
+</div>
+
+<div *ngIf="repositories.length > 0; else noResults" class="repositories-container">
+  <mat-card class="repository-card" *ngFor="let repo of repositories">
+    <mat-card-header>
+      <mat-card-title>{{ repo.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="description">{{ repo.description || 'No description available' }}</p>
+      <div class="repo-details">
+        <p><strong>Forks:</strong> {{ repo.forks_count }}</p>
+        <p><strong>Stars:</strong> {{ repo.stargazers_count }}</p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="accent" class="view-details-button" (click)="viewDetails(repo)">View Details</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #noResults>
+  <div class="no-results-container">
+    <p>No repositories found. Please Search.</p>
+  </div>
+</ng-template>

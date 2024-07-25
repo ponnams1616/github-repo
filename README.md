@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
 
+## Project Overview
+This Angular application allows users to search GitHub repositories, view details, manage issues, and visualize data using a pie chart.
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js and npm
+- Angular CLI
+
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone <repository_url>
+   cd CCI-ANGULAr-TEST
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+   
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

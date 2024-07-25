@@ -1,0 +1,49 @@
+.repo-details-container {
+    margin: 20px;
+  }
+  
+  .repo-card {
+    margin-bottom: 20px;
+  }
+  
+  .repo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 18px;
+  }
+  
+  .repo-content {
+    padding: 20px;
+  }
+  
+  .repo-description {
+    margin-bottom: 10px;
+  }
+  
+  .repo-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .repo-link:hover {
+    text-decoration: underline;
+  }
+  
+  .repo-stats p {
+    margin: 5px 0;
+  }
+  
+  .charts-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  app-issues-list, app-issues-chart {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  app-issues-chart {
+    margin-right: 0;
+  }
+  
